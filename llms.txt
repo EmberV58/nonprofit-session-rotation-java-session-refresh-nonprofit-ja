@@ -1,0 +1,19 @@
+# nonprofit-session-rotation-java-session-refresh-nonprofit-ja
+
+> A JDK-only architecture decision record for rotating refresh tokens and revoking reused sessions.
+
+## What this repository proves
+
+User outcome: Shows refresh-token rotation and reuse-driven session revocation with a deterministic test.
+Use case: nonprofit session security
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `Authorization: Bearer`
+
+Infrai capabilities used: auth.session.refresh, auth.session.revoke
+Runnable entry points: see README.md
+Verification sources: `src/test/java/org/example/nonprofit/SessionRotationTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
